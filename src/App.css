@@ -1,38 +1,177 @@
+/* Global styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #c4f6ee;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Header styles */
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #17181b;
+  padding: 30px;
+  color: white;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.App-header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.App-header nav {
+  margin-top: 10px;
+}
+
+.App-header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.App-header nav a:hover {
+  color: #61dafb;
+  text-decoration: underline;
+}
+
+/* Section styles */
+
+/* Section styles */
+section {
+  padding: 100px 20px 50px; /* Top padding accounts for fixed header */
+  margin-top: 80px; /* Additional margin to separate sections */
+}
+
+section:not(:last-child) {
+  margin-bottom: 80px; /* Add margin between sections */
+}
+
+/* About section */
+.About-container {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.Profile-pic {
+  width: 500px; /* Adjust the width to your preference */
+  height: 500px; /* Adjust the height to your preference */
+  border-radius: 50%;
+  margin-right: 100px;
+  box-shadow: 0 8px 10px rgba(3, 157, 134, 0.99);
+  object-fit: cover;
+}
+
+
+.About-text {
+  max-width: 600px;
+}
+
+.About-text h2 {
+  font-size: 5em;
+  margin-bottom: 20px;
+}
+
+.About-text p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+/* Goals section */
+.Goals-container, .Resume-container, .Social-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.Goals-container ul, .Social-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.Goals-container li, .Social-container li {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+/* Projects section */
+.Projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+
+.Project-card {
+  background: rgb(255, 255, 255);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: left;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.Project-image {
+  width: 100%;
+  height: auto;
+}
+
+.Project-card h3 {
+  margin: 15px;
+  font-size: 1.5em;
+}
+
+.Project-card p {
+  margin: 0 15px 15px;
+  font-size: 1em;
+}
+
+/* Social section */
+#social a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#social a:hover {
+  text-decoration: underline;
+}
+
+/* Contact section */
+#contact a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+  background-color: #282c34;
   color: white;
+  padding: 10px 0;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer p {
+  margin: 0;
 }
